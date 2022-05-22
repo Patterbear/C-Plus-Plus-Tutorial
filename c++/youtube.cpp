@@ -1,16 +1,12 @@
 #include <iostream>
 
-using std::cout; // Using directive
+using std::cout;
 
-// 'main' function
-// Return type: Integer
 int main()
 {
-    int variable; // Declaration
-    variable = 5 + 1; // Initialisation
+    int slices = 10;
 
-    int copy = variable; // Copy variable
+    cout << "You have " << slices << " slices of pizza." << std::endl; // C++ string concatenation
 
-
-    cout << copy; // Prints string to console
+    printf("%i\n", slices); // C print statement
 }
