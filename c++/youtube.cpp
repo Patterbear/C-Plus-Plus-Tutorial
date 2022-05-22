@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include <climits>
 
 using std::cout;
 using std::cin;
@@ -24,18 +24,25 @@ void print_pow(double base, int exponent)
 
 int main()
 {
-    double base;
-    int exponent;
+   short a;
+   int b; // Minimum 16 bits, usually 32
+   long c; // Minimum 32 bits
+   long long d;
+   unsigned short aa;
+   unsigned int bb;
+   unsigned long cc;
+   unsigned long long dd;
 
-    cout << "Base: ";
-    cin >> base;
+cout  << "short -> " << "Max: " << SHRT_MAX  << " Min: " << SHRT_MIN << std::endl;
+cout  << "int -> " << "Max: " << INT32_MAX << " Min: " << INT16_MIN << std::endl;
+cout  << "long -> " << "Max: " << LONG_MAX  << " Min: " << LONG_MIN << std::endl;
+cout  << "long long -> " << "Max: " << LLONG_MAX  << " Min: " << LLONG_MIN << std::endl;
 
-    cout << "Exponent: ";
-    cin >> exponent;
+cout  << "unsigned short -> " << "Max: " << USHRT_MAX  << std::endl;
+cout  << "unsigned int -> " << "Max: " << UINT32_MAX << std::endl;
+cout  << "unsigned long -> " << "Max: " << ULONG_MAX << std::endl;
+cout  << "unsigned long long -> " << "Max: " << ULLONG_MAX  <<  std::endl;
 
-    print_pow(base, exponent);
-    print_pow(100, 4);
-    print_pow(2, 4);
 
 }
 
