@@ -6,9 +6,11 @@ using std::cout; // Using directive
 // Return type: Integer
 int main()
 {
-    cout << "First Tutorial Program\n"; // Prints string to console
-}
+    int variable; // Declaration
+    variable = 5 + 1; // Initialisation
 
-void test() {
-    cout << "Directive Test";
+    int copy = variable; // Copy variable
+
+
+    cout << copy; // Prints string to console
 }
