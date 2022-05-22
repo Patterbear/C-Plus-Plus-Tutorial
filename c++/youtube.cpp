@@ -1,22 +1,22 @@
 #include <iostream>
+#include <cmath>
 
 using std::cout;
 using std::cin;
 
 
-int multiply(int x, int y)
-{
-    return x * y;
-}
-
 int main()
 {
-    int slices;
-    cout << "How many slices of pizza would you like?: ";
-    cin >> slices;
-    cout << "You have " << slices << " slices of pizza." << std::endl;
+    int base, exponent;
 
-    cout << "The number of your pizza slices has doubled, you now have " << multiply(slices, 2) << " pizza slices." << std::endl;
+    cout << "Base: ";
+    cin >> base;
 
+    cout << "Exponent: ";
+    cin >> exponent;
+
+    double power = pow(base, exponent);
+
+    cout << power << std::endl;
 }
 
