@@ -22,7 +22,7 @@ void print_pow(double base, int exponent)
     cout << base << " raised to the " << exponent << " power is " << result << "." << std::endl;
 }
 
-int main()
+void integral_data_types()
 {
    short a;
    int b; // Minimum 16 bits, usually 32
@@ -33,16 +33,26 @@ int main()
    unsigned long cc;
    unsigned long long dd;
 
-cout  << "short -> " << "Max: " << SHRT_MAX  << " Min: " << SHRT_MIN << std::endl;
-cout  << "int -> " << "Max: " << INT32_MAX << " Min: " << INT16_MIN << std::endl;
-cout  << "long -> " << "Max: " << LONG_MAX  << " Min: " << LONG_MIN << std::endl;
-cout  << "long long -> " << "Max: " << LLONG_MAX  << " Min: " << LLONG_MIN << std::endl;
+    cout  << "short -> " << "Max: " << SHRT_MAX  << " Min: " << SHRT_MIN << std::endl;
+    cout  << "int -> " << "Max: " << INT32_MAX << " Min: " << INT16_MIN << std::endl;
+    cout  << "long -> " << "Max: " << LONG_MAX  << " Min: " << LONG_MIN << std::endl;
+    cout  << "long long -> " << "Max: " << LLONG_MAX  << " Min: " << LLONG_MIN << std::endl;
 
-cout  << "unsigned short -> " << "Max: " << USHRT_MAX  << std::endl;
-cout  << "unsigned int -> " << "Max: " << UINT32_MAX << std::endl;
-cout  << "unsigned long -> " << "Max: " << ULONG_MAX << std::endl;
-cout  << "unsigned long long -> " << "Max: " << ULLONG_MAX  <<  std::endl;
+    cout  << "unsigned short -> " << "Max: " << USHRT_MAX  << std::endl;
+    cout  << "unsigned int -> " << "Max: " << UINT32_MAX << std::endl;
+    cout  << "unsigned long -> " << "Max: " << ULONG_MAX << std::endl;
+    cout  << "unsigned long long -> " << "Max: " << ULLONG_MAX  <<  std::endl;
 
+}
 
+int main()
+{ 
+   unsigned char x = 128;
+   char y = 128;
+
+    cout << x << std::endl;
+
+    cout << (int) x << std::endl;
+    cout << (int) y << std::endl;
 }
 
