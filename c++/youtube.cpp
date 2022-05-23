@@ -45,14 +45,28 @@ void integral_data_types()
 
 }
 
-int main()
-{ 
-   unsigned char x = 128;
+void chars() {
+    unsigned char x = 128;
    char y = 128;
 
     cout << x << std::endl;
 
     cout << (int) x << std::endl;
     cout << (int) y << std::endl;
+}
+
+int main()
+{ 
+    char single_quote = '\'';
+
+    cout <<"New Line\nExample";
+    cout <<"Backspace\bExample";
+    cout << "Tab\tExample";
+    cout << "Vertical Tab\vExample";
+    cout << "Alert Noise\aExample";
+    cout << "\0"; // End of C-Style string
+    cout << "\"Quote\" in string";
+    cout << "\\";
+
 }
 
