@@ -1,5 +1,6 @@
 #include <iostream>
 #include <climits>
+#include <float.h>
 
 using std::cout;
 using std::cin;
@@ -45,7 +46,8 @@ void integral_data_types()
 
 }
 
-void chars() {
+void chars() 
+{
     unsigned char x = 128;
    char y = 128;
 
@@ -55,7 +57,8 @@ void chars() {
     cout << (int) y << std::endl;
 }
 
-void escape_sequences() {
+void escape_sequences()
+{
     char single_quote = '\'';
 
     cout <<"New Line\nExample";
@@ -68,8 +71,8 @@ void escape_sequences() {
     cout << "\\";
 }
 
-int main()
-{ 
+void boolean_data_type()
+{
     bool good = 1;
     bool bad = 0;
     bool ugly = -1;
@@ -78,7 +81,26 @@ int main()
     bool found = true;
 
     cout << std::boolalpha << found << std::endl;
-    if(found) cout << "This is true";
+    if(found) cout << "This is true";   
+}
+
+int main()
+{ 
+
+    int pence = 100;
+    float a = 10.0 / 3; // Least number of significant digits, not entirely trustworthy
+    a = a * 10000000000000000;
+    double b = 7.7E4; // 77000 (7.7x10^4)
+    long double c;
+
+    cout << a << std::endl;
+    cout << std::fixed << a << std::endl;
+    cout << b << std::endl;
+
+    // Number of digits data types can be trusted to
+    cout << "Float: " << FLT_DIG << std::endl; // 6
+    cout << "Double: " << DBL_DIG << std::endl; // 15
+    cout << "Long Double: " << LDBL_DIG << std::endl; // 18
 
 
 }
