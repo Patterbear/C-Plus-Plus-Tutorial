@@ -5,6 +5,8 @@
 using std::cout;
 using std::cin;
 
+#define X 10 // C method of creating constants (Macros)
+
 double power(double base, int exponent)
 {
     double result = 1;
@@ -84,9 +86,9 @@ void boolean_data_type()
     if(found) cout << "This is true";   
 }
 
-int main()
-{ 
-
+void floating_point_numbers()
+{
+    
     int pence = 100;
     float a = 10.0 / 3; // Least number of significant digits, not entirely trustworthy
     a = a * 10000000000000000;
@@ -101,7 +103,12 @@ int main()
     cout << "Float: " << FLT_DIG << std::endl; // 6
     cout << "Double: " << DBL_DIG << std::endl; // 15
     cout << "Long Double: " << LDBL_DIG << std::endl; // 18
+}
 
-
+int main()
+{ 
+    const int x = 3; // Variable cannot be changed (must be assigned when intialised)
+    
+    enum { y = 100 }; // Enum constant
 }
 
