@@ -1,6 +1,7 @@
 #include <iostream>
 #include <climits>
 #include <float.h>
+#include <cmath>
 
 using std::cout;
 using std::cin;
@@ -105,10 +106,34 @@ void floating_point_numbers()
     cout << "Long Double: " << LDBL_DIG << std::endl; // 18
 }
 
+void constants()
+{
+    const int x = 3; // Variable cannot be changed (must be assigned when intialised)
+    enum { y = 100 }; // Enum constant
+}
+
 int main()
 { 
-    const int x = 3; // Variable cannot be changed (must be assigned when intialised)
-    
-    enum { y = 100 }; // Enum constant
+    cout << sqrt(25) << std::endl;
+
+    cout << sqrt(-25) << std::endl; // nan
+    cout << pow(9, 999) << std::endl; // inf
+    cout << pow(-9, 999) << std::endl; // -inf
+
+    cout << NAN << " " << INFINITY << " " << -INFINITY << std::endl;
+
+    cout << 10 % 3 << std::endl;
+    cout << remainder(10, 3.25) << std::endl;
+    cout << fmod(10, 3.25) << std::endl;
+
+    cout << fmax(1.5, 5) << std::endl; // Highest value
+    cout << fmin(3, 2.5) << std::endl; // Lowest value
+
+    cout << ceil(4.8) << std::endl; // Rounds up (ceiling)
+    cout << floor(3.9) << std::endl; // Rounds down (floor)
+
+    cout << trunc(-1.6) << std::endl; // Crops what comes after decimal point
+
+    cout << round(-1.7) << std::endl; // Rounds to whichever is closest
 }
 
