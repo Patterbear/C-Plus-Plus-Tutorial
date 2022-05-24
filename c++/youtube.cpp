@@ -2,9 +2,11 @@
 #include <climits>
 #include <float.h>
 #include <cmath>
+#include <string>
 
 using std::cout;
 using std::cin;
+using std::string;
 
 #define X 10 // C method of creating constants (Macros)
 
@@ -112,8 +114,8 @@ void constants()
     enum { y = 100 }; // Enum constant
 }
 
-int main()
-{ 
+void numeric_functions()
+{
     cout << sqrt(25) << std::endl;
 
     cout << sqrt(-25) << std::endl; // nan
@@ -135,5 +137,28 @@ int main()
     cout << trunc(-1.6) << std::endl; // Crops what comes after decimal point
 
     cout << round(-1.7) << std::endl; // Rounds to whichever is closest
+}
+
+int main()
+{ 
+    string empty; // Empty string
+    string text = "String";
+    string complete_text = text + " Example"; // Concatenation
+
+    cout << text[0] << std::endl;
+    cout << empty << std::endl;
+
+    cout << complete_text<< std::endl;
+    cout << complete_text.length() << std::endl;
+
+    char name[] = "Benjamin"; // C string, array of characters ("Benjamin\0", cannot be altered)
+
+    complete_text = "String overwritten.";
+
+    string greeting;
+    std::cin >> greeting;
+    std::cout << greeting <<std::endl;
+
+
 }
 
