@@ -55,8 +55,7 @@ void chars() {
     cout << (int) y << std::endl;
 }
 
-int main()
-{ 
+void escape_sequences() {
     char single_quote = '\'';
 
     cout <<"New Line\nExample";
@@ -67,6 +66,20 @@ int main()
     cout << "\0"; // End of C-Style string
     cout << "\"Quote\" in string";
     cout << "\\";
+}
+
+int main()
+{ 
+    bool good = 1;
+    bool bad = 0;
+    bool ugly = -1;
+    cout << good <<  std::endl << bad << std::endl << ugly << std::endl;
+
+    bool found = true;
+
+    cout << std::boolalpha << found << std::endl;
+    if(found) cout << "This is true";
+
 
 }
 
