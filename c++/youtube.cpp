@@ -160,10 +160,23 @@ void string_class_c_strings()
     cout << greeting <<std::endl;
 }
 
+void getline_for_strings()
+{
+    string greeting;
+    getline(cin, greeting); // For strings
+    cout << greeting << std::endl;
+}
+
 int main()
 { 
-string greeting;
-getline(cin, greeting); // For strings
-cout << greeting << std::endl;
+    string greeting = "Hello";
+    greeting += " there";
+    greeting.append(" friend!!");
+    greeting.insert(3, " ");
+    greeting.erase(3, 1);
+    greeting.erase(greeting.length()-1);
+    greeting.pop_back();
+    greeting.replace(0, 5, "Bonjour");
+    cout << greeting << " (" << greeting.length() << " characters)" << std::endl;
 }
 
