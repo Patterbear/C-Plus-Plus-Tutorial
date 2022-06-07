@@ -139,8 +139,8 @@ void numeric_functions()
     cout << round(-1.7) << std::endl; // Rounds to whichever is closest
 }
 
-int main()
-{ 
+void string_class_c_strings()
+{
     string empty; // Empty string
     string text = "String";
     string complete_text = text + " Example"; // Concatenation
@@ -156,9 +156,14 @@ int main()
     complete_text = "String overwritten.";
 
     string greeting;
-    std::cin >> greeting;
-    std::cout << greeting <<std::endl;
+    cin >> greeting;
+    cout << greeting <<std::endl;
+}
 
-
+int main()
+{ 
+string greeting;
+getline(cin, greeting); // For strings
+cout << greeting << std::endl;
 }
 
