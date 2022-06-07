@@ -203,8 +203,18 @@ void string_operation_methods()
     if(greeting.compare("Good morning.") == 0) cout << "EQUAL" << std::endl;
 }
 
+void literals()
+{
+    auto x = 5.5L; // Determines data type based on literal value (add '-std=c++11' to compilation command)
+}
+
 int main()
 { 
-    auto x = 5.5L; // Determines data type based on literal value (add '-std=c++11' to compilation command)
+    int number1 = 30; // 30 (Decimal)
+    int number2 = 0x30; // 48 (Hexadecimal)
+    int number3 = 030; // 24 (Octal)
+
+    cout << number1 << ", " << number2 << ", " << number3 << std::endl; 
+    cout << std::hex << number1 << ", " << std::oct << number1 << std::endl; 
 }
 
