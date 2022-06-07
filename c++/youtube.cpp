@@ -167,8 +167,8 @@ void getline_for_strings()
     cout << greeting << std::endl;
 }
 
-int main()
-{ 
+void string_modifier_methods()
+{
     string greeting = "Hello";
     greeting += " there";
     greeting.append(" friend!!");
@@ -178,5 +178,29 @@ int main()
     greeting.pop_back();
     greeting.replace(0, 5, "Bonjour");
     cout << greeting << " (" << greeting.length() << " characters)" << std::endl;
+}
+
+int main()
+{ 
+    string to_censor = "What the hell?";
+    to_censor.replace(to_censor.find("hell"), 4, "****");
+    cout << to_censor << std::endl;
+
+    string greeting = "Good morning.";
+    cout << greeting.substr(5, 7) << std::endl;
+
+    cout << greeting.find_first_of("o") << std::endl;
+    cout << greeting.find_first_of("!") << std::endl; // Returns NPOS (Huge number which = -1)
+
+    unsigned long long x = -1; // Equivalent to NPOS (-1 as unsigned long long)
+    cout << x << std::endl;
+
+    if(greeting.find_first_of("!") == -1) cout << "NOT FOUND" << std::endl; // Checks if "!" is in string
+
+
+    // Two ways of comparing strings
+    if(greeting == "Good morning.") cout << "EQUAL" << std::endl;
+    if(greeting.compare("Good morning.") == 0) cout << "EQUAL" << std::endl;
+
 }
 
