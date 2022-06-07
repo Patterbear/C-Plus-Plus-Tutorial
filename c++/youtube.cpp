@@ -180,8 +180,8 @@ void string_modifier_methods()
     cout << greeting << " (" << greeting.length() << " characters)" << std::endl;
 }
 
-int main()
-{ 
+void string_operation_methods()
+{
     string to_censor = "What the hell?";
     to_censor.replace(to_censor.find("hell"), 4, "****");
     cout << to_censor << std::endl;
@@ -201,6 +201,10 @@ int main()
     // Two ways of comparing strings
     if(greeting == "Good morning.") cout << "EQUAL" << std::endl;
     if(greeting.compare("Good morning.") == 0) cout << "EQUAL" << std::endl;
+}
 
+int main()
+{ 
+    auto x = 5.5L; // Determines data type based on literal value (add '-std=c++11' to compilation command)
 }
 
