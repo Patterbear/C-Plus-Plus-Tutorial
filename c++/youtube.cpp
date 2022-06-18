@@ -218,8 +218,8 @@ void hex_and_octal()
     cout << std::hex << number1 << ", " << std::oct << number1 << std::endl; 
 }
 
-int main()
-{ 
+void operator_precedence_and_associativity()
+{
     int x = 5 + 5; // Expression - use operators to evaluate to a single value
     int y = 5 / 2; // Uses integer division
     double z = 5. / 2; // Correct result
@@ -242,5 +242,37 @@ int main()
     (e = d) = 100; //  e = d; e=100
 
     cout << "d: " << d << "\t" << "e: " << e << std::endl;
+}
+
+int main()
+{ 
+    cout << "Grade: ";
+    int grade;
+    cin >> grade;
+
+    if(grade< 40)
+    {
+        cout << "Fail";
+    }
+    else if(grade < 50)
+    {
+        cout << "Third";
+    }
+    else if(grade < 60)
+    {
+        cout << "Lower Second";
+    }
+    else if(grade < 70)
+    {
+        cout << "Upper Second";
+    }
+    else if(grade <= 100)
+    {
+        cout << "First";
+    }
+    else
+    {
+        cout << "Invalid grade";
+    }
 }
 
