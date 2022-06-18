@@ -208,13 +208,39 @@ void literals()
     auto x = 5.5L; // Determines data type based on literal value (add '-std=c++11' to compilation command)
 }
 
-int main()
-{ 
+void hex_and_octal()
+{
     int number1 = 30; // 30 (Decimal)
     int number2 = 0x30; // 48 (Hexadecimal)
     int number3 = 030; // 24 (Octal)
 
     cout << number1 << ", " << number2 << ", " << number3 << std::endl; 
     cout << std::hex << number1 << ", " << std::oct << number1 << std::endl; 
+}
+
+int main()
+{ 
+    int x = 5 + 5; // Expression - use operators to evaluate to a single value
+    int y = 5 / 2; // Uses integer division
+    double z = 5. / 2; // Correct result
+
+    double a = 10 % 4; // Modulus operator
+
+    double b = 10 / 4 * 6 + 1; // Example of operator precedence (BIDMAS)
+    double c = 10 / 4 * (6 + 1); // Because of precedence, b and c are different
+
+    cout << y << std::endl;
+    cout << z << std::endl;
+    cout << a << std::endl;
+
+    cout << b << std::endl << c << std::endl;
+
+    double d;
+    double e;
+
+    d = 10;
+    (e = d) = 100; //  e = d; e=100
+
+    cout << "d: " << d << "\t" << "e: " << e << std::endl;
 }
 
