@@ -244,8 +244,8 @@ void operator_precedence_and_associativity()
     cout << "d: " << d << "\t" << "e: " << e << std::endl;
 }
 
-int main()
-{ 
+void if_statements()
+{
     cout << "Grade: ";
     int grade;
     cin >> grade;
@@ -274,5 +274,35 @@ int main()
     {
         cout << "Invalid grade";
     }
+}
+
+int main()
+{ 
+    string answer = "Benjamin";
+    int age_answer = 20;
+    
+    string guess;
+    cout << "Guess my name: ";
+    cin >> guess;
+
+    int age_guess;
+    cout << "Guess my age: ";
+    cin >> age_guess; 
+
+    if(guess == answer && age_guess == age_answer)
+    {
+        cout << "Correct.\n";
+    }
+    else if(guess == answer || age_guess == age_answer)
+    {
+        cout << "Partially correct.\n";
+    }
+    else if(guess != answer && age_guess != age_answer)
+    {
+        cout << "Completely incorrect.\n";
+    }
+
+    return 0;
+
 }
 
