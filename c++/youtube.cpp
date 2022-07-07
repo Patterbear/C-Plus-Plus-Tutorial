@@ -276,8 +276,8 @@ void if_statements()
     }
 }
 
-int main()
-{ 
+void logical_and_comparison_operators()
+{
     string answer = "Benjamin";
     int age_answer = 20;
     
@@ -301,8 +301,26 @@ int main()
     {
         cout << "Completely incorrect.\n";
     }
+}
 
+int main()
+{ 
+    enum class Season{summer, spring, autumn, winter};
+    Season now = Season::summer;
+
+    switch(now)
+    {   
+        case Season::summer:
+            cout << "It's warm outside.\n";
+            break;
+        case Season::spring:
+            break;
+        case Season::autumn:
+            break;
+        case Season::winter:
+            cout << "It's cold outside.\n";
+            break;
+    }
     return 0;
-
 }
 
