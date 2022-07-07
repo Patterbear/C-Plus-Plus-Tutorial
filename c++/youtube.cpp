@@ -303,8 +303,8 @@ void logical_and_comparison_operators()
     }
 }
 
-int main()
-{ 
+void switch_statement_and_enum()
+{
     enum class Season{summer, spring, autumn, winter};
     Season now = Season::summer;
 
@@ -321,6 +321,27 @@ int main()
             cout << "It's cold outside.\n";
             break;
     }
+}
+
+int main()
+{ 
+    for (int i = 1; i < 11; i++)
+    {
+        cout << i << std::endl;
+    }
+
+    for (int i = 10; i >0; i--)
+    {
+        cout << i << std::endl;
+    }  
+
+    int fact = 5;
+    int factorial = fact;
+    for (int i = factorial - 1; i > 1; i--)
+    {
+        factorial = factorial * i;
+    }
+    cout << "Factorial of " << fact << ": " << factorial << std::endl;
     return 0;
 }
 
