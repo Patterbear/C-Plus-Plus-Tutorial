@@ -323,8 +323,8 @@ void switch_statement_and_enum()
     }
 }
 
-int main()
-{ 
+void for_loops()
+{
     for (int i = 1; i < 11; i++)
     {
         cout << i << std::endl;
@@ -342,6 +342,31 @@ int main()
         factorial = factorial * i;
     }
     cout << "Factorial of " << fact << ": " << factorial << std::endl;
-    return 0;
+}
+
+int main()
+{ 
+    int i = 0;
+    while(i<10)
+    {
+        cout << i << "\t";
+        i++;
+    }
+
+    int j = 10;
+    while(j >= 1)
+    {
+        cout << j << "\t";
+        j--;
+    }
+
+    int factorial = 5;
+    int k = factorial - 1;
+    while(k > 1)
+    {
+        factorial *= k;
+        k--;
+    }
+    cout << std::endl << factorial << std::endl;
 }
 
