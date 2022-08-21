@@ -381,8 +381,8 @@ void do_while_loop()
     } while(guess != password);
 }
 
-int main()
-{ 
+void break_continue()
+{
     string sentence = "Hello. My name is Benjamin";
     for(int i=  0; i < sentence.size(); i++)
     {
@@ -395,5 +395,13 @@ int main()
                 cout << sentence[i] << std::endl;
     }
     cout << "Done\n";
+}
+
+int main()
+{ 
+    int answer = 10;
+    int guess;
+    cin >> guess;
+    guess == answer ? cout << "Correct\n" : cout << "Incorrect\n";
 }
 
