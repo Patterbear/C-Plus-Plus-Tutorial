@@ -344,8 +344,8 @@ void for_loops()
     cout << "Factorial of " << fact << ": " << factorial << std::endl;
 }
 
-int main()
-{ 
+void while_loop_and_factorial_calculator()
+{
     int i = 0;
     while(i<10)
     {
@@ -368,5 +368,16 @@ int main()
         k--;
     }
     cout << std::endl << factorial << std::endl;
+}
+
+int main()
+{ 
+    string password = "password";
+    string guess;
+    do
+    {
+        cout << "Password: ";
+        cin >> guess;
+    } while(guess != password);
 }
 
