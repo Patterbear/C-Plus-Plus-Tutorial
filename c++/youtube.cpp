@@ -370,8 +370,8 @@ void while_loop_and_factorial_calculator()
     cout << std::endl << factorial << std::endl;
 }
 
-int main()
-{ 
+void do_while_loop()
+{
     string password = "password";
     string guess;
     do
@@ -379,5 +379,21 @@ int main()
         cout << "Password: ";
         cin >> guess;
     } while(guess != password);
+}
+
+int main()
+{ 
+    string sentence = "Hello. My name is Benjamin";
+    for(int i=  0; i < sentence.size(); i++)
+    {
+
+        if(sentence[i] == 'a')
+        {
+            cout << "Found 'a'\n";
+            continue;
+        }
+                cout << sentence[i] << std::endl;
+    }
+    cout << "Done\n";
 }
 
