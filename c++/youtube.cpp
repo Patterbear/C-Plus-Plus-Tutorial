@@ -3,6 +3,8 @@
 #include <float.h>
 #include <cmath>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 using std::cout;
 using std::cin;
@@ -405,10 +407,34 @@ void conditional_operator()
     guess == answer ? cout << "Correct\n" : cout << "Incorrect\n";
 }
 
+void play_game()
+{
+    int random = rand() % 251;
+    cout << random << std::endl;
+    cout << "Guess a number: ";
+    while(true)
+    {
+        int guess;
+        cin >> guess;
+        if(guess == random)
+        {
+            cout << "You win.\n";
+            break;
+        } else if(guess < random)
+        {
+            cout << "Too low.\n";
+        } else
+        {
+            cout << "Too high.\n";
+        }
+    }
+}
+
 int main()
 { 
+    srand(time(NULL));
     int choice;
-    
+
     do
     {
         cout << "0. Quit" << std::endl << "1. Play Game\n";
@@ -421,7 +447,8 @@ int main()
                 cout << "Exiting...";
                 return 0;
             case 1:
-                cout << "Game begins.";
+                play_game();
+                break;
         }
 
     }
