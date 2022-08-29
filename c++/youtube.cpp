@@ -407,8 +407,20 @@ void conditional_operator()
     guess == answer ? cout << "Correct\n" : cout << "Incorrect\n";
 }
 
+void print_array(int array[], int count)
+{
+    for(int i = 0; i < count; i++)
+    {
+        std::cout << array[i] << "\t";
+    }
+    cout << std::endl;
+}
+
 void play_game()
 {
+    int guesses[250];
+    int guess_count = 0;
+
     int random = rand() % 251;
     cout << random << std::endl;
     cout << "Guess a number: ";
@@ -416,6 +428,7 @@ void play_game()
     {
         int guess;
         cin >> guess;
+        guesses[guess_count++] = guess;
         if(guess == random)
         {
             cout << "You win.\n";
@@ -428,6 +441,7 @@ void play_game()
             cout << "Too high.\n";
         }
     }
+    print_array(guesses, guess_count);
 }
 
 int main()
