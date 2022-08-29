@@ -397,11 +397,35 @@ void break_continue()
     cout << "Done\n";
 }
 
-int main()
-{ 
+void conditional_operator()
+{
     int answer = 10;
     int guess;
     cin >> guess;
     guess == answer ? cout << "Correct\n" : cout << "Incorrect\n";
+}
+
+int main()
+{ 
+    int choice;
+    
+    do
+    {
+        cout << "0. Quit" << std::endl << "1. Play Game\n";
+
+        cin >> choice;
+
+        switch(choice)
+        {
+            case 0:
+                cout << "Exiting...";
+                return 0;
+            case 1:
+                cout << "Game begins.";
+        }
+
+    }
+    while(choice != 0);
+
 }
 
