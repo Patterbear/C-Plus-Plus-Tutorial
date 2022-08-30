@@ -39,11 +39,30 @@ void fill_array_from_input()
     std::cout << test << std::endl;
 }
 
-int main()
+void creating_a_vector()
 {
    std::vector<int> data = {1, 2, 3};
    data.push_back(4);
    std::cout << data[data.size() - 1] << std::endl;
    data.pop_back();
    std::cout << data.size() << std::endl;
+}
+
+void print_vector(std::vector<int> &data)  // '&' shares memory with original variable (pass by reference, same memory location)
+{
+    data.push_back(12);
+    for(int i = 0;i < data.size(); i++)
+    {
+        std::cout << data[i] << "\t";
+    }
+}
+
+
+int main()
+{
+    std::vector<int> data = {1, 2, 3};
+    print_vector(data);
+    print_vector(data);
+    print_vector(data);
+    print_vector(data);
 }
