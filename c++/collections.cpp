@@ -2,6 +2,7 @@
 #include <limits>
 #include <vector>
 #include <string>
+#include <array>
 
 void print_array(int array[], int size)
 {
@@ -57,12 +58,25 @@ void print_vector(std::vector<int> &data)  // '&' shares memory with original va
     }
 }
 
-
-int main()
+void passing_vectors_to_functions()
 {
     std::vector<int> data = {1, 2, 3};
     print_vector(data);
     print_vector(data);
     print_vector(data);
     print_vector(data);
+}
+
+void print_array(std::array<int, 20> &data, int size)
+{
+    for(int i = 0;i < size; i++)
+    {
+        std::cout << data[i] << "\t";
+    }
+}
+
+int main()
+{
+    std::array<int, 20> data = {1, 2, 3};
+    print_array(data, 3);
 }
