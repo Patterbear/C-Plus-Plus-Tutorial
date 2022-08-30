@@ -5,6 +5,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 using std::cout;
 using std::cin;
@@ -407,19 +408,18 @@ void conditional_operator()
     guess == answer ? cout << "Correct\n" : cout << "Incorrect\n";
 }
 
-void print_array(int array[], int count)
+void print_vector(std::vector<int> vector)
 {
-    for(int i = 0; i < count; i++)
+    for(int i = 0; i < vector.size(); i++)
     {
-        std::cout << array[i] << "\t";
+        std::cout << vector[i] << "\t";
     }
     cout << std::endl;
 }
 
 void play_game()
 {
-    int guesses[250];
-    int guess_count = 0;
+    std::vector <int> guesses;
 
     int random = rand() % 251;
     cout << random << std::endl;
@@ -428,7 +428,7 @@ void play_game()
     {
         int guess;
         cin >> guess;
-        guesses[guess_count++] = guess;
+        guesses.push_back(guess);
         if(guess == random)
         {
             cout << "You win.\n";
@@ -441,7 +441,7 @@ void play_game()
             cout << "Too high.\n";
         }
     }
-    print_array(guesses, guess_count);
+    print_vector(guesses);
 }
 
 int main()
