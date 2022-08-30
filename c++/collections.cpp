@@ -1,5 +1,7 @@
 #include <iostream>
 #include <limits>
+#include <vector>
+#include <string>
 
 void print_array(int array[], int size)
 {
@@ -9,7 +11,7 @@ void print_array(int array[], int size)
     }
 }
 
-int main()
+void fill_array_from_input()
 {
     const int SIZE = 10;
     int guesses[SIZE];
@@ -35,6 +37,13 @@ int main()
     std::string test;
     std::cin >> test;
     std::cout << test << std::endl;
+}
 
-    return 0;
+int main()
+{
+   std::vector<int> data = {1, 2, 3};
+   data.push_back(4);
+   std::cout << data[data.size() - 1] << std::endl;
+   data.pop_back();
+   std::cout << data.size() << std::endl;
 }
