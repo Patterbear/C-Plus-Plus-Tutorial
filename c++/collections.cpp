@@ -75,8 +75,27 @@ void print_array(std::array<int, 20> &data, int size)
     }
 }
 
-int main()
+void stl_arrays_in_practice()
 {
     std::array<int, 20> data = {1, 2, 3};
     print_array(data, 3);
+}
+
+int main()
+{
+    std::array<int, 60> data = {1, 2, 3, 4, 5, 6};
+
+    for(int n : data)
+    {
+        std::cout << n << "\t";
+    }
+
+    /*
+    for(int i = 0; i < 6; i++)
+    {
+        std::cout << data[i] << "\t";
+    }
+    */
+    std::cout << "\n";
+
 }
