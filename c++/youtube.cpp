@@ -7,6 +7,7 @@
 #include <ctime>
 #include <vector>
 #include <array>
+#include <fstream>
 
 using std::cout;
 using std::cin;
@@ -430,18 +431,21 @@ void print_array(std::array<int, 251> array, int size)
 
 void play_game()
 {
-    std::array <int, 251> guesses;
+    std::vector <int> guesses;
     int count = 0;
 
     int random = rand() % 251;
     cout << random << std::endl;
     cout << "Guess a number: ";
+
     while(true)
     {
         int guess;
         cin >> guess;
+        count++;
 
-        guesses[count++] = guess;
+        guesses.push_back(guess);
+
         if(guess == random)
         {
             cout << "You win.\n";
@@ -454,7 +458,33 @@ void play_game()
             cout << "Too high.\n";
         }
     }
-    print_array(guesses, count);
+
+    std::ifstream input ("best_score.txt");
+    if(!input.is_open())
+    {
+        cout << "Unable to read file\n";
+        return;
+    }
+
+    int best_score;
+    input >> best_score;
+
+    std::ofstream output("best_score.txt");
+        if(!output.is_open())
+    {
+        cout << "Unable to read file\n";
+        return;
+    }
+
+    if(count < best_score)
+    {
+        output << count;
+    } else
+    {
+        output << best_score;
+    }
+
+    print_vector(guesses);
 }
 
 int main()
